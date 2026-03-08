@@ -3,7 +3,7 @@
 // ============================================================
 // IMPORTANT: Replace this URL with your deployed Google Apps Script URL.
 // See SETUP.md for instructions.
-const SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx5-48D2ppE8o0-RYwUAfQIPg1RyPEvOv1X9mGUn4mCMQpHQc7uhuAuwhTlqHjPIl0llg/exec';
 // ============================================================
 
 const form = document.getElementById('feedback-form');
@@ -19,7 +19,14 @@ form.addEventListener('submit', async function (e) {
   e.preventDefault();
 
   if (SCRIPT_URL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
-    showError('Google Apps Script URL not configured. See SETUP.md for instructions.');
+    showError('Google Apps Script URL not configured');
+    return;
+  }
+
+  // Verify reCAPTCHA
+  const recaptchaResponse = grecaptcha.getResponse();
+  if (!recaptchaResponse) {
+    showError('Please complete the CAPTCHA.');
     return;
   }
 
@@ -44,6 +51,7 @@ form.addEventListener('submit', async function (e) {
       bugReport: bugReport,
       featureRequest: featureRequest,
       generalFeedback: generalFeedback,
+      recaptchaToken: recaptchaResponse,
       screenshot: '',
     };
 
@@ -108,6 +116,7 @@ function hideError() {
 
 function resetForm() {
   form.reset();
+  grecaptcha.reset();
   form.style.display = '';
   successMessage.style.display = 'none';
   errorMessage.style.display = 'none';

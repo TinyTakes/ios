@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TinyTakes - Capture Your Baby's Best Moments</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
   <!-- Nav -->
@@ -205,6 +206,10 @@
             <label for="screenshot">Screenshot (optional)</label>
             <input type="file" id="screenshot" name="screenshot" accept="image/*">
             <p class="hint">Max 5MB. Attach a screenshot to help us understand the issue.</p>
+          </div>
+
+          <div class="form-group">
+            <div class="g-recaptcha" data-sitekey="6LdpYoMsAAAAAMAkay0AA7BFYRiD19sA-VwfZ5od"></div>
           </div>
 
           <button type="submit" id="submit-btn">
