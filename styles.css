@@ -541,10 +541,76 @@ button[type="submit"]:disabled {
   font-size: 14px;
 }
 
-.footer-copy {
+.footer-links {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
   margin-top: 16px;
+}
+
+.footer-links a {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #FFFFFF;
+}
+
+.footer-copy {
+  margin-top: 12px;
   font-size: 12px !important;
   opacity: 0.5;
+}
+
+/* ---- Legal Pages ---- */
+.legal-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px 72px;
+}
+
+.legal-page h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.legal-page .legal-updated {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+}
+
+.legal-page h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 32px;
+  margin-bottom: 8px;
+}
+
+.legal-page p,
+.legal-page li {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.legal-page ul {
+  padding-left: 24px;
+  margin-bottom: 12px;
+}
+
+.legal-page a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.legal-page a:hover {
+  text-decoration: underline;
 }
 
 /* ---- Responsive ---- */

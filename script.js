@@ -23,13 +23,6 @@ form.addEventListener('submit', async function (e) {
     return;
   }
 
-  // Verify reCAPTCHA
-  const recaptchaResponse = grecaptcha.getResponse();
-  if (!recaptchaResponse) {
-    showError('Please complete the CAPTCHA.');
-    return;
-  }
-
   setLoading(true);
 
   try {
@@ -51,7 +44,6 @@ form.addEventListener('submit', async function (e) {
       bugReport: bugReport,
       featureRequest: featureRequest,
       generalFeedback: generalFeedback,
-      recaptchaToken: recaptchaResponse,
       screenshot: '',
     };
 
@@ -116,7 +108,6 @@ function hideError() {
 
 function resetForm() {
   form.reset();
-  grecaptcha.reset();
   form.style.display = '';
   successMessage.style.display = 'none';
   errorMessage.style.display = 'none';
