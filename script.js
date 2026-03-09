@@ -14,9 +14,36 @@ const successMessage = document.getElementById('success-message');
 const errorMessage = document.getElementById('error-message');
 const errorText = document.getElementById('error-text');
 
+// Inline validation
+const nameInput = document.getElementById('name');
+const emailInput = document.getElementById('email');
+const nameError = document.getElementById('name-error');
+const emailError = document.getElementById('email-error');
+
+function validateField(input, errorEl) {
+  if (!input.validity.valid) {
+    errorEl.style.display = '';
+    input.classList.add('input-error');
+    return false;
+  }
+  errorEl.style.display = 'none';
+  input.classList.remove('input-error');
+  return true;
+}
+
+nameInput.addEventListener('blur', () => validateField(nameInput, nameError));
+emailInput.addEventListener('blur', () => validateField(emailInput, emailError));
+nameInput.addEventListener('input', () => validateField(nameInput, nameError));
+emailInput.addEventListener('input', () => validateField(emailInput, emailError));
+
 // Form submission
 form.addEventListener('submit', async function (e) {
   e.preventDefault();
+
+  // Run field validation before submitting
+  const nameValid = validateField(nameInput, nameError);
+  const emailValid = validateField(emailInput, emailError);
+  if (!nameValid || !emailValid) return;
 
   if (SCRIPT_URL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
     showError('Google Apps Script URL not configured');

@@ -429,6 +429,21 @@ input[type="file"] {
   margin-top: 4px;
 }
 
+.field-error {
+  font-size: 13px;
+  color: var(--error);
+  margin-top: 4px;
+}
+
+input.input-error {
+  border-color: var(--error);
+}
+
+input.input-error:focus {
+  border-color: var(--error);
+  box-shadow: 0 0 0 3px rgba(255, 59, 48, 0.1);
+}
+
 /* ---- Buttons ---- */
 button[type="submit"] {
   width: 100%;
