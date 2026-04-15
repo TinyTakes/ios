@@ -3,23 +3,191 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TinyTakes - Capture your child's best moments</title>
-  <meta name="description" content="TinyTakes uses on-device AI to find actions in your little one's photos and videos and automatically turn them into beautiful highlight reels. Private, fast, and easy to use.">
+  <title>TinyTakes - The Story Behind the App</title>
+  <meta name="description" content="TinyTakes was built by a parent who got tired of losing the best moments in an ocean of photos and videos. Here's the story of why and how.">
   <link rel="icon" type="image/png" href="logo.png">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="TinyTakes - Capture your child's best moments">
-  <meta property="og:description" content="On-device AI finds actions in your little one's photos and videos and turns them into beautiful highlight reels. No cloud uploads, no internet required.">
+  <meta property="og:title" content="TinyTakes - The Story Behind the App">
+  <meta property="og:description" content="Why I built an AI-powered app to help parents find and relive their children's best moments.">
   <meta property="og:image" content="logo.png">
   <meta property="og:type" content="website">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="TinyTakes - Capture your child's best moments">
-  <meta name="twitter:description" content="On-device AI finds actions in your little one's photos and videos and turns them into beautiful highlight reels. No cloud uploads, no internet required.">
+  <meta name="twitter:title" content="TinyTakes - The Story Behind the App">
+  <meta name="twitter:description" content="Why I built an AI-powered app to help parents find and relive their children's best moments.">
   <meta name="twitter:image" content="logo.png">
 
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .story-hero {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+      color: #FFFFFF;
+    }
+
+    .story-hero-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 80px 24px 72px;
+      text-align: center;
+    }
+
+    .story-hero h1 {
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+      margin-bottom: 16px;
+    }
+
+    .story-hero .subtitle {
+      font-size: 18px;
+      opacity: 0.9;
+      line-height: 1.6;
+      max-width: 540px;
+      margin: 0 auto;
+    }
+
+    .story-section {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .story-section h2 {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      letter-spacing: -0.3px;
+      color: var(--primary-dark);
+    }
+
+    .story-section p {
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+    }
+
+    .story-section .pullquote {
+      font-size: 19px;
+      font-style: italic;
+      color: var(--primary);
+      border-left: 3px solid var(--primary-light);
+      padding-left: 20px;
+      margin: 28px 0;
+    }
+
+    .placeholder-note {
+      background: rgba(45, 106, 79, 0.06);
+      border: 1px dashed var(--primary-light);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      font-size: 14px;
+      color: var(--primary);
+      margin: 20px 0;
+    }
+
+    .privacy-values {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .privacy-value {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    }
+
+    .privacy-value h4 {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .privacy-value p {
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
+    .story-cta {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .story-cta h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    .story-cta p {
+      font-size: 16px;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+    }
+
+    .story-cta-buttons {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-app {
+      display: inline-block;
+      padding: 14px 32px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #FFFFFF;
+      background: var(--primary);
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .btn-app:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-beta {
+      display: inline-block;
+      padding: 14px 32px;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--primary);
+      border: 1.5px solid var(--primary);
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .btn-beta:hover {
+      background: rgba(45, 106, 79, 0.05);
+    }
+
+    @media (max-width: 768px) {
+      .story-hero h1 { font-size: 30px; }
+      .story-hero-inner { padding: 56px 24px 56px; }
+      .story-section h2 { font-size: 22px; }
+    }
+
+    @media (max-width: 480px) {
+      .story-hero h1 { font-size: 26px; }
+      .story-hero .subtitle { font-size: 16px; }
+      .story-cta-buttons { flex-direction: column; align-items: center; }
+    }
+  </style>
 </head>
 <body>
   <!-- Nav -->
@@ -27,224 +195,86 @@
     <div class="nav-inner">
       <a href="#" class="nav-logo"><img src="logo.png" alt="TinyTakes" class="nav-logo-img">TinyTakes</a>
       <div class="nav-links">
-        <a href="#features">Features</a>
-        <a href="#how-it-works">How It Works</a>
-        <a href="#feedback" class="nav-cta">Beta Feedback</a>
+        <a href="#our-story">Our Story</a>
+        <a href="#privacy-first">Privacy</a>
+        <a href="ios/index.html" class="nav-cta">See the App</a>
       </div>
     </div>
   </nav>
 
   <!-- Hero -->
-  <header class="hero">
-    <div class="hero-inner">
+  <header class="story-hero">
+    <div class="story-hero-inner">
       <img src="logo.png" alt="TinyTakes logo" class="hero-logo">
-      <p class="hero-badge">Beta</p>
-      <h1>Capture your child's best moments</h1>
-      <p class="hero-subtitle">TinyTakes uses on-device AI to find actions in your little one's photos and videos and automatically turn them into beautiful highlight reels.</p>
-      <p class="hero-requirement">Requires iOS 15.1 or later</p>
-      <div class="hero-actions">
-        <a href="beta.html" class="btn-primary">Join Beta</a>
-        <a href="#feedback" class="btn-ghost">Share Feedback</a>
-      </div>
+      <h1>Why I built TinyTakes</h1>
+      <p class="subtitle">The story of a parent, thousands of unsorted photos and videos, and an app that finally made sense of it all.</p>
     </div>
   </header>
 
-  <!-- App Screenshots -->
+  <!-- The Problem -->
+  <section id="our-story" class="section">
+    <div class="story-section">
+      <h2>The Problem Every Parent Knows</h2>
+      <p>If you're a parent, you know the drill. Your phone is full of photos and videos of your kids - <i>thousands</i> of them. First steps, messy meals, silly dances, quiet moments on the couch. They're all in there somewhere.</p>
+      <p>But "somewhere" is the problem. They're buried in your camera roll between screenshots of grocery lists and videos from school plays you don't have time to rewatch. You took them because those moments mattered. But you never have time to go back and find them.</p>
+      <p>I lived this frustration for months. Every few weeks I'd think, "I should really organize these." I'd open my Photos app, scroll for a while, get interrupted by my toddler, and put away my phone. Sound familiar?</p>
+    </div>
+  </section>
+
+  <!-- The Spark -->
   <section class="section section-alt">
-    <div class="section-inner">
-      <h2 class="section-title">See it in action</h2>
-      <div class="screenshots">
-        <div class="screenshot">
-          <div class="phone-frame">
-            <img src="screenshots/Home Screen.jpg" alt="TinyTakes Home Screen">
-          </div>
-          <p class="screenshot-label">Home</p>
+    <div class="story-section">
+      <h2>The Moment That Changed Everything</h2>
+      <p>When my child was born, I made myself a promise: I'd put together a short highlight video for the first couple of weeks, and then one for every month after that. A little time capsule of all the moments that mattered.</p>
+      <p>The reality was harder than I expected. Every time a new month rolled around, I'd sit down to curate the photos and videos I wanted to use. Then I'd open a movie editor on my phone, import everything, and quickly realize that using all the footage would create a 30-minute montage. So I'd have to watch each and every clip, decide what to keep, trim the rest, and piece it all together.</p>
+      <p>It took hours. Hours on my phone that I could have spent with my kid or catching up on desperately needed sleep.</p>
+      <p class="pullquote">I was spending more time editing memories than making new ones.</p>
+      <p>That's when it clicked. I have a background in machine learning and a passion for video creation and personalization. What if I could combine the two? What if an app could watch all those clips for me, understand what was happening in each one, and help me quickly select just the moments that mattered?</p>
+      <p>One night in January 2026, after my toddler was fast asleep, I started building.</p>
+    </div>
+  </section>
+
+  <!-- The Solution -->
+  <section class="section">
+    <div class="story-section">
+      <h2>Building the Solution</h2>
+      <p>TinyTakes uses on-device AI to watch your videos and look at your photos the way you would. It detects 14 distinct actions like walking, crawling, playing, eating, and laughing. Then it lets you turn those tagged moments into beautiful highlight reels with transitions, music, and captions.</p>
+      <p>The key word there is "on-device." Everything happens on your iPhone. Your photos and videos never leave your phone. No cloud uploads. No internet required. No one sees your family's moments except you.</p>
+      <p>I built it this way on purpose.</p>
+    </div>
+  </section>
+
+  <!-- Privacy by Design -->
+  <section id="privacy-first" class="section section-alt">
+    <div class="story-section">
+      <h2>Privacy Isn't a Feature. It's the Foundation.</h2>
+      <p>I had one non-negotiable rule: my photos and videos would never touch a server. Not mine, not anyone's. This wasn't a business decision. It was a parenting decision.</p>
+      <p>The tech industry has normalized uploading our most personal moments to the cloud. I didn't want to build another app that asks you to trust a company with media of your kids. So I didn't.</p>
+      <div class="privacy-values">
+        <div class="privacy-value">
+          <h4>100% On-Device</h4>
+          <p>All AI models run entirely on your iPhone. Nothing is sent anywhere.</p>
         </div>
-        <div class="screenshot">
-          <div class="phone-frame">
-            <img src="screenshots/Select Media.jpg" alt="Select Media screen">
-          </div>
-          <p class="screenshot-label">Select Media</p>
+        <div class="privacy-value">
+          <h4>No Internet Required</h4>
+          <p>TinyTakes works in airplane mode. Your data stays yours.</p>
         </div>
-        <div class="screenshot">
-          <div class="phone-frame">
-            <img src="screenshots/Search Media.jpg" alt="Search Media screen">
-          </div>
-          <p class="screenshot-label">Search Actions</p>
-        </div>
-        <div class="screenshot">
-          <div class="phone-frame">
-            <img src="screenshots/Create Highlight Reel.jpg" alt="Create Highlight Reel screen">
-          </div>
-          <p class="screenshot-label">Create Reel</p>
+        <div class="privacy-value">
+          <h4>No Analytics</h4>
+          <p>No tracking, no third-party SDKs, no usage data collection.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Features -->
-  <section id="features" class="section">
-    <div class="section-inner">
-      <h2 class="section-title">Everything you need to<br>preserve your child's moments</h2>
-
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/></svg>
-          </div>
-          <h3>100% On-Device AI</h3>
-          <p>Every model runs entirely on your iPhone. Your media never leave your phone, no data is sent to the cloud, and no internet connection is needed. Your family's privacy is never compromised.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z"/><path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6z"/></svg>
-          </div>
-          <h3>You're in Control</h3>
-          <p>TinyTakes detects 14 distinct actions like walking, crawling, playing, and eating. Review what the AI found and modify any label before it's used. You always have the final say.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 01-1.125-1.125M3.375 19.5h1.5C5.496 19.5 6 18.996 6 18.375m-3.75 0V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125m1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-1.5A1.125 1.125 0 0118 18.375M20.625 4.5H3.375m17.25 0c.621 0 1.125.504 1.125 1.125M20.625 4.5h-1.5C18.504 4.5 18 5.004 18 5.625m3.75 0v1.5c0 .621-.504 1.125-1.125 1.125M3.375 4.5c-.621 0-1.125.504-1.125 1.125M3.375 4.5h1.5C5.496 4.5 6 5.004 6 5.625m-3.75 0v1.5c0 .621.504 1.125 1.125 1.125m0 0h1.5m-1.5 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125m1.5-3.75C5.496 8.25 6 7.746 6 7.125v-1.5M4.875 8.25C5.496 8.25 6 8.754 6 9.375v1.5m0-5.25v5.25m0-5.25C6 5.004 6.504 4.5 7.125 4.5h9.75c.621 0 1.125.504 1.125 1.125m1.125 2.625h1.5m-1.5 0A1.125 1.125 0 0118 7.125v-1.5m1.125 2.625c-.621 0-1.125.504-1.125 1.125v1.5m2.625-2.625c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125M18 5.625v5.25M7.125 12h9.75m-9.75 0A1.125 1.125 0 016 10.875M7.125 12C6.504 12 6 12.504 6 13.125m0-2.25c0 .621.504 1.125 1.125 1.125M18 10.875c0 .621-.504 1.125-1.125 1.125M18 10.875c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125m-12 5.25v-5.25m0 5.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125m-12 0v-1.5c0-.621-.504-1.125-1.125-1.125M18 18.375v-5.25m0 5.25v-1.5c0-.621.504-1.125 1.125-1.125M18 13.125v1.5c0 .621.504 1.125 1.125 1.125M18 13.125c0-.621.504-1.125 1.125-1.125M6 13.125v1.5c0 .621-.504 1.125-1.125 1.125M6 13.125C6 12.504 5.496 12 4.875 12m-1.5 0h1.5m-1.5 0c-.621 0-1.125-.504-1.125-1.125v-1.5c0-.621.504-1.125 1.125-1.125m1.5 0h-1.5"/></svg>
-          </div>
-          <h3>Themed Highlight Reels</h3>
-          <p>Choose from curated themes (Movement, Expression, Social) to tell your story.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"/></svg>
-          </div>
-          <h3>Full Customization</h3>
-          <p>Add crossfade or fade-to-black transitions, choose background music, overlay captions, and pick a font style.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
-          </div>
-          <h3>Fast Processing</h3>
-          <p>Smart encoding creates your highlight reel in minutes, with transitions, music, and captions applied.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z"/></svg>
-          </div>
-          <h3>Easy Sharing</h3>
-          <p>Save to your Photos Library. Preview your reel before saving and see duration and file size at a glance.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- How It Works -->
-  <section id="how-it-works" class="section section-alt">
-    <div class="section-inner">
-      <h2 class="section-title">How it works</h2>
-
-      <div class="steps">
-        <div class="step">
-          <div class="step-number">1</div>
-          <h3>Select and tag media</h3>
-          <p>Choose media from your library and let TinyTakes detect your little one's actions. Review the tags and approve the clips you want to use.</p>
-        </div>
-        <div class="step-connector"></div>
-        <div class="step">
-          <div class="step-number">2</div>
-          <h3>Pick a date range and theme</h3>
-          <p>Select a time period and theme. TinyTakes recommends the best approved clips for you.</p>
-        </div>
-        <div class="step-connector"></div>
-        <div class="step">
-          <div class="step-number">3</div>
-          <h3>Customize your reel</h3>
-          <p>Add transitions, background music, captions, and choose a font style that fits your family's personality.</p>
-        </div>
-        <div class="step-connector"></div>
-        <div class="step">
-          <div class="step-number">4</div>
-          <h3>Preview and share</h3>
-          <p>Watch your highlight reel, then save it to your library or share it with family and friends.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Feedback Form -->
-  <section id="feedback" class="section">
-    <div class="section-inner">
-      <h2 class="section-title">Beta Feedback</h2>
-      <p class="section-subtitle">Help us improve TinyTakes by sharing your experience!</p>
-
-      <div class="card">
-        <form id="feedback-form">
-          <div class="form-group">
-            <label for="name">Name <span class="required">*</span></label>
-            <input type="text" id="name" name="name" required placeholder="Your name">
-            <p class="field-error" id="name-error" style="display: none;">Please enter your name.</p>
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email <span class="required">*</span></label>
-            <input type="email" id="email" name="email" required placeholder="you@example.com">
-            <p class="field-error" id="email-error" style="display: none;">Please enter a valid email address.</p>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="device">Device Info</label>
-              <input type="text" id="device" name="device" placeholder="e.g. iPhone 15 Pro, iOS 17.4">
-            </div>
-            <div class="form-group">
-              <label for="appVersion">App Version</label>
-              <input type="text" id="appVersion" name="appVersion" placeholder="e.g. 1.0.0">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="bugReport">Bug Report</label>
-            <textarea id="bugReport" name="bugReport" rows="3" placeholder="Describe any bugs you encountered, what you expected to happen, and steps to reproduce..."></textarea>
-          </div>
-
-          <div class="form-group">
-            <label for="featureRequest">Feature Request</label>
-            <textarea id="featureRequest" name="featureRequest" rows="3" placeholder="What features or improvements would you like to see?"></textarea>
-          </div>
-
-          <div class="form-group">
-            <label for="generalFeedback">General Feedback</label>
-            <textarea id="generalFeedback" name="generalFeedback" rows="3" placeholder="Any other thoughts, impressions, or suggestions..."></textarea>
-          </div>
-
-          <div class="form-group">
-            <label for="screenshot">Screenshot (optional)</label>
-            <input type="file" id="screenshot" name="screenshot" accept="image/*">
-            <p class="hint">Max 5MB. Attach a screenshot to help us understand the issue.</p>
-          </div>
-
-          <button type="submit" id="submit-btn">
-            <span class="btn-text">Submit Feedback</span>
-            <span class="btn-loading" style="display: none;">Submitting...</span>
-          </button>
-        </form>
-
-        <!-- Success Message -->
-        <div id="success-message" style="display: none;">
-          <div class="success-icon">&#10003;</div>
-          <h3>Thank you!</h3>
-          <p>Your feedback has been submitted successfully. We appreciate your help in making TinyTakes better!</p>
-          <button onclick="resetForm()" class="btn-secondary">Submit Another</button>
-        </div>
-
-        <!-- Error Message -->
-        <div id="error-message" style="display: none;">
-          <div class="error-icon">!</div>
-          <h3>Something went wrong</h3>
-          <p id="error-text">Please try again later.</p>
-          <button onclick="hideError()" class="btn-secondary">Try Again</button>
-        </div>
+  <!-- CTA -->
+  <section class="section">
+    <div class="story-cta">
+      <h2>See TinyTakes in Action</h2>
+      <p>TinyTakes is currently in beta for iOS. Check out the app, see how it works, and join the beta to try it yourself.</p>
+      <div class="story-cta-buttons">
+        <a href="ios/index.html" class="btn-app">See the App &rarr;</a>
+        <a href="ios/beta.html" class="btn-beta">Join the Beta</a>
       </div>
     </div>
   </section>
@@ -263,7 +293,5 @@
       <p class="footer-copy">&copy; 2026 TinyTakes. All rights reserved.</p>
     </div>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
