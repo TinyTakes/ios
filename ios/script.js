@@ -1,5 +1,5 @@
 // ============================================================
-// TinyTakes Beta Feedback - Form Handler
+// TinyTakes Feedback - Form Handler
 // ============================================================
 // IMPORTANT: Replace this URL with your deployed Google Apps Script URL.
 // See SETUP.md for instructions.
